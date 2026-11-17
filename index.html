@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI VID - Video Generator</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #090b14;
+    color: white;
+}
+
+header {
+    padding: 22px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #25283b;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #8b75ff;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    margin-left: 22px;
+}
+
+.hero {
+    text-align: center;
+    padding: 65px 20px 35px;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 6vw, 55px);
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #927aff;
+}
+
+.hero p {
+    color: #a5a6b5;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 850px;
+    margin: 25px auto;
+    padding: 25px;
+    background: #141726;
+    border: 1px solid #292e48;
+    border-radius: 18px;
+}
+
+label {
+    display: block;
+    margin: 18px 0 10px;
+    font-weight: bold;
+}
+
+textarea, select, input {
+    width: 100%;
+    padding: 15px;
+    background: #0b0e1b;
+    border: 1px solid #353a55;
+    border-radius: 10px;
+    color: white;
+    outline: none;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.upload {
+    padding: 25px;
+    border: 2px dashed #55517c;
+    text-align: center;
+    border-radius: 12px;
+    color: #aaa;
+}
+
+.generate {
+    width: 100%;
+    margin-top: 25px;
+    padding: 17px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg,#7256ff,#a24dff);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.generate:hover {
+    opacity: .85;
+}
+
+.preview {
+    margin-top: 25px;
+    padding: 25px;
+    background: #141726;
+    border: 1px solid #292e48;
+    border-radius: 18px;
+    text-align: center;
+}
+
+.preview-box {
+    min-height: 180px;
+    background: #090b14;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    margin-top: 18px;
+    padding: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 35px;
+    color: #777;
+}
+
+@media(max-width:600px) {
+    header {
+        padding: 18px;
+    }
+    nav a {
+        margin-left: 10px;
+        font-size: 12px;
+    }
+    .container {
+        margin: 15px;
+        padding: 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">✦ AI VID</div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#create">Create</a>
+        <a href="#preview">Preview</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Turn Your Ideas Into <span>Videos</span></h1>
+    <p>Create amazing AI videos from simple text prompts.<br>
+    Your imagination is the only limit.</p>
+</section>
+
+<div class="container" id="create">
+
+    <h2>🎬 Create Your Video</h2>
+
+    <label>Describe Your Video</label>
+    <textarea id="prompt"
+    placeholder="Example: A cute cat cooking in a modern kitchen..."></textarea>
+
+    <label>Upload an Image (Optional)</label>
+    <div class="upload">
+        <input type="file" id="image" accept="image/*">
+    </div>
+
+    <label>Video Style</label>
+    <select id="style">
+        <option>Cinematic</option>
+        <option>Realistic</option>
+        <option>Anime</option>
+        <option>3D Animation</option>
+        <option>Cartoon</option>
+    </select>
+
+    <label>Video Duration</label>
+    <select id="duration">
+        <option>5 Seconds</option>
+        <option>10 Seconds</option>
+        <option>15 Seconds</option>
+    </select>
+
+    <label>Aspect Ratio</label>
+    <select id="ratio">
+        <option>16:9 Landscape</option>
+        <option>9:16 Portrait</option>
+        <option>1:1 Square</option>
+    </select>
+
+    <button class="generate" onclick="generateVideo()">
+        ✨ Generate Video
+    </button>
+
+</div>
+
+<div class="container preview" id="preview">
+    <h2>🎥 Video Preview</h2>
+    <div class="preview-box" id="result">
+        Your generated video will appear here.
+    </div>
+</div>
+
+<footer>
+    © 2026 AI VID Generator | Create Without Limits
+</footer>
+
+<script>
+function generateVideo() {
+    const prompt = document.getElementById("prompt").value.trim();
+    const result = document.getElementById("result");
+
+    if (!prompt) {
+        alert("Please describe your video first!");
+        return;
+    }
+
+    result.innerHTML =
+    "✨ Your prompt is ready! AI video generation will be connected in the next development stage.";
+}
+</script>
+
+</body>
+</html>
