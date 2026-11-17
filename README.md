@@ -1,0 +1,2 @@
+# Ai-video-generation
+"An AI-powered video generation platform that allows users to create stunning videos from text prompts using artificial intelligence. Simple, fast, and user-friendly and turned text into visual story"
