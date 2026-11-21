@@ -6,6 +6,88 @@
 <title>MERR STUDIO-Video Generator</title>
 
 <style>
+/* MERR STUDIO NEON UPGRADE */
+
+body {
+    background:
+      radial-gradient(ellipse at top, #211044 0%, #090b14 55%);
+    color: #fff;
+}
+
+header {
+    background: rgba(10, 10, 25, 0.9);
+    box-shadow: 0 0 25px rgba(139, 92, 246, 0.18);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: #c4a5ff;
+    text-shadow: 0 0 15px #9333ea;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    text-shadow: 0 0 25px rgba(147, 51, 234, 0.5);
+}
+
+.hero h1 span {
+    color: #c084fc;
+    text-shadow: 0 0 18px #9333ea;
+}
+
+.container, .preview {
+    background: linear-gradient(145deg, #19172d, #0e1020);
+    border: 1px solid #7042b8;
+    box-shadow: 0 0 25px rgba(147, 51, 234, 0.15);
+    transition: 0.3s;
+}
+
+.container:hover, .preview:hover {
+    border-color: #b46cff;
+    box-shadow: 0 0 28px rgba(147, 51, 234, 0.3);
+}
+
+textarea, select, input {
+    border: 1px solid #6741a5;
+    transition: 0.3s;
+}
+
+textarea:focus, select:focus, input:focus {
+    border-color: #c084fc;
+    box-shadow: 0 0 12px #9333ea;
+}
+
+.generate {
+    background: linear-gradient(90deg, #702cff, #c026d3);
+    box-shadow: 0 0 18px rgba(168, 85, 247, 0.4);
+    transition: 0.3s;
+}
+
+.generate:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 28px #9333ea;
+    opacity: 1;
+}
+
+.upload {
+    border-color: #a855f7;
+    background: rgba(147, 51, 234, 0.08);
+}
+
+.preview-box {
+    border: 1px dashed #9333ea;
+}
+
+nav a:hover {
+    color: #c084fc;
+}
+
+footer {
+    color: #c084fc;
+}
+    
 * {
     margin: 0;
     padding: 0;
